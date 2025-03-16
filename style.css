@@ -27,13 +27,20 @@ body {
     right: 0;
     width: 50%;
     height:100%;
-    background: seagreen;
+    background: #fff;
     display: flex;
     align-items: center;
     color: #333;
     text-align: center;
     padding: 40px;
+    z-index: 1;
 }
+
+.form-box.register {
+    visibility: hidden;
+}
+
+
 form {
     width: 100%;
 }
@@ -97,7 +104,7 @@ form {
     margin: 15px 0;
 }
 
-.social-icons {
+.social-icons a {
     display: inline-flex;
     padding: 10px;
     border: 2px solid #ccc;
@@ -109,8 +116,49 @@ form {
 }
 
 
+.toggle-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
 
+}
 
+.toggle-box::before {
+    content: '';
+    position: absolute;
+    left: -250%;
+    width: 300%;
+    height: 100%;
+    background: #7494ec;
+    border-radius: 150px;
+    z-index: 2;
+}
+
+.toggle-panel {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    /*background: seagreen;*/
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+
+}
+
+.toggle-panel p {
+    margin-bottom: 20px;
+}
+
+.toggle-panel .btn {
+    width: 160px;
+    height: 46px;
+    background: transparent;
+    border: 2px solid #fff;
+    box-shadow: none;
+}
 
 
 
